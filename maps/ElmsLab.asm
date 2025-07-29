@@ -999,16 +999,16 @@ ElmText_MissionFromMrPokemon:
 
 ElmText_ChooseAPokemon:
 	text "I want you to"
-	line "raise one of the"
+	line "raise some of the"
 
 	para "#mon contained"
 	line "in these Balls."
 
-	para "You'll be that"
+	para "You'll be the"
 	line "#mon's first"
 	cont "partner, <PLAYER>!"
 
-	para "Go on. Pick one!"
+	para "Go on. Pick some!"
 	done
 
 ElmText_LetYourMonBattleIt:
@@ -1024,33 +1024,36 @@ LabWhereGoingText:
 
 TakeCyndaquilText:
 	text "Elm: You'll take"
-	line "Cyndaquil, the"
-	cont "fire #mon?"
+	line "the new"
+	cont "generation"
+	line "of #mon?"
 	done
 
 TakeTotodileText:
-	text "Elm: Do you want"
-	line "Totodile, the"
-	cont "water #mon?"
+	text "Elm: You'll take"
+	line "the old"
+	cont "generation"
+	line "of #mon?"
 	done
 
 TakeChikoritaText:
 	text "Elm: So, you like"
-	line "Chikorita, the"
-	cont "grass #mon?"
+	line "these Eevee, the"
+	cont "adaptable"
+	line "#mon?"
 	done
 
 DidntChooseStarterText:
 	text "Elm: Think it over"
 	line "carefully."
 
-	para "Your partner is"
+	para "Your choice is"
 	line "important."
 	done
 
 ChoseStarterText:
 	text "Elm: I think"
-	line "that's a great"
+	line "those are great"
 	cont "#mon too!"
 	done
 
@@ -1324,34 +1327,34 @@ AideText_ThiefReturnedMon:
 	cont "#mon…"
 
 	para "…came back to"
-	line "return it!"
+	line "steal another!"
 
-	para "But Prof.Elm said"
-	line "to him…"
+	para "But Prof.Elm"
+	line "caught the boy."
 
-	para "“It seems that"
-	line "the #mon likes"
-	cont "you very much."
+	para "He started"
+	line "throwing lab"
+	cont "equipment at him."
 
-	para "#mon do their"
-	line "best with someone"
-	cont "they love."
+	para "I think a glass"
+	line "flash hit him"
+	cont "in the head."
 
-	para "I think it should"
-	line "stay with you.”"
-
-	para "…Isn't it moving?"
-	line "It made me cry!"
+	para "The thief stopped"
+	line "Right away and ran."
 
 	para "I saw the boy's"
 	line "face as he left."
 
-	para "He looked so"
-	line "happy!"
+	para "He was in tears"
+	line "and had a bruise."
+
+	para "I don't think"
+	line "he'll ever be back!"
 	done
 
 ElmGiveMasterBallText1:
-	text "Elm: Hi, <PLAYER>!"
+	text "Elm: Hello, <PLAYER>!"
 	line "Thanks to you, my"
 
 	para "research is going"
@@ -1537,7 +1540,7 @@ ElmAfterBattleText:
 
 	para "I was right to"
 	line "trust you with"
-	cont "a #mon!"
+	cont "those #mon!"
 	done
 
 AideText_GiveYouPotions:
@@ -1590,6 +1593,10 @@ ElmsLabOfficerText1:
 
 	para "Oh my… So you're"
 	line "the thief?"
+
+	para "I was hoping to"
+	line "shoot someone"
+	cont "today!"
 	done
 
 ElmsLabOfficerText2:
@@ -1606,8 +1613,8 @@ ElmsLabOfficerText3:
 	text "OK! So <RIVAL>"
 	line "was his name."
 
-	para "Thanks for helping"
-	line "my investigation!"
+	para "I'm so going to"
+	line "shoot that guy!"
 	done
 
 ElmsLabLyraWhichPokemonText:
@@ -1630,20 +1637,20 @@ LyraReceivedStarterText:
 
 LyraNicknamedChikoritaText:
 	text "Lyra: It's so"
-	line "cute! I'll nick-"
-	cont "name it Chicory!"
+	line "green! I'll nick-"
+	cont "name it Salad!"
 	done
 
 LyraNicknamedCyndaquilText:
 	text "Lyra: It's so"
 	line "cute! I'll nick-"
-	cont "name it Cinder!"
+	cont "name it Sizzle!"
 	done
 
 LyraNicknamedTotodileText:
 	text "Lyra: It's so"
 	line "cute! I'll nick-"
-	cont "name it Toto!"
+	cont "name it Bubbles!"
 	done
 
 ElmsLabLyraGoodChoiceText:
@@ -1696,6 +1703,11 @@ ElmsLabLyraTheftInnocentText:
 	para "I saw a red-haired"
 	line "boy spying on the"
 	cont "building!"
+
+
+	para "Please don't shoot"
+	line "them. They're"
+	cont "innocent!"
 	done
 
 ElmsLabLyraTheftGoodbyeText:
@@ -1731,8 +1743,10 @@ ElmsLabTravelTip1Text:
 
 	para "Travel Tip 1:"
 
-	para "Press Start to"
-	line "open the Menu."
+	para "To advance the"
+	line "game you need to"
+	cont "travel. Not just"
+	line "read books. Go!"
 	done
 
 ElmsLabTravelTip2Text:
@@ -1776,9 +1790,14 @@ ElmsLabTrashcanText:
 	done
 
 ElmsLabPCText:
-	text "Observations On"
-	line "#mon Evolution"
+	text "This looks like"
+	line "Prof.Elm's PC"
 
-	para "…It says on the"
-	line "screen…"
+	para "It looks like"
+	line "he is reading"
+	cont "A story about"
+	line "Typhlosion..."
+
+	para "...and a girl?"
+	line "Oh. Oh my!"
 	done
