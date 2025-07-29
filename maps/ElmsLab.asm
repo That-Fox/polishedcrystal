@@ -210,7 +210,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY ; Gen 2 Starters
 	givepoke TOTODILE, PLAIN_FORM, 5, ORAN_BERRY
 	givepoke CHIKORITA, PLAIN_FORM, 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
@@ -252,7 +252,7 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CHARMANDER, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke CHARMANDER, PLAIN_FORM, 5, ORAN_BERRY ; Gen 1 Strarters
 	givepoke SQUIRTLE, PLAIN_FORM, 5, ORAN_BERRY
 	givepoke BULBASAUR, PLAIN_FORM, 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
@@ -292,9 +292,9 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
-	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
-	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, PLAIN_FORM, 5, FIRE_STONE ; Eevee Starters
+	givepoke EEVEE, PLAIN_FORM, 5, WATER_STONE
+	givepoke EEVEE, PLAIN_FORM, 5, LEAF_STONE
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
