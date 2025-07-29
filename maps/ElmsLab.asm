@@ -211,6 +211,8 @@ CyndaquilPokeBallScript:
 	promptbutton
 	waitsfx
 	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke TOTODILE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke CHIKORITA, PLAIN_FORM, 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -237,8 +239,8 @@ TotodilePokeBallScript:
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic TOTODILE
-	cry TOTODILE
+	pokepic SQUIRTLE
+	cry SQUIRTLE
 	waitbutton
 	closepokepic
 	opentext
@@ -250,7 +252,9 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke TOTODILE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke CHARMANDER, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke SQUIRTLE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke BULBASAUR, PLAIN_FORM, 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -275,8 +279,8 @@ ChikoritaPokeBallScript:
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic CHIKORITA
-	cry CHIKORITA
+	pokepic EEVEE
+	cry EEVEE
 	waitbutton
 	closepokepic
 	opentext
@@ -288,7 +292,9 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CHIKORITA, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, PLAIN_FORM, 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
