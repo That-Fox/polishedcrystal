@@ -46,9 +46,9 @@ ElmsLab_MapScriptHeader:
 	def_object_events
 	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
-	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, JohtoPokeBallScript, EVENT_JOHTO_POKEBALL_IN_ELMS_LAB
+	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, KantoPokeBallScript, EVENT_KANTO_POKEBALL_IN_ELMS_LAB
+	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, EeveePokeBallScript, EVENT_EEVEE_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
 	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
 
@@ -192,7 +192,7 @@ LabTryToLeaveScript:
 	applyonemovement PLAYER, step_up
 	end
 
-CyndaquilPokeBallScript:
+JohtoPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
@@ -202,11 +202,11 @@ CyndaquilPokeBallScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeCyndaquilText
+	writetext TakeJohtoText
 	yesorno
 	iffalse_jumpopenedtext DidntChooseStarterText
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_JOHTO_FROM_ELM
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
@@ -216,25 +216,24 @@ CyndaquilPokeBallScript:
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraPicksChikoritaMovement
+	applymovement ELMSLAB_LYRA, LyraPickEeveeMovement
 	pause 15
 	disappear ELMSLAB_POKE_BALL3
 	opentext
-	getmonname CHIKORITA, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	writetext LyraNicknamedChikoritaText
+	writetext LyraPickEeveeText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraAfterChikoritaMovement
+	applymovement ELMSLAB_LYRA, LyraAfterEeveeMovement
 	readvar VAR_FACING
 	ifequalfwd RIGHT, ElmDirectionsScript
-	applymovement PLAYER, AfterCyndaquilMovement
+	applymovement PLAYER, AfterJohtoMovement
 	sjumpfwd ElmDirectionsScript
 
-TotodilePokeBallScript:
+KantoPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
@@ -244,11 +243,11 @@ TotodilePokeBallScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeTotodileText
+	writetext TakeKantoText
 	yesorno
 	iffalse_jumpopenedtext DidntChooseStarterText
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_KANTO_FROM_ELM
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
@@ -258,23 +257,22 @@ TotodilePokeBallScript:
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraPicksCyndaquilMovement
+	applymovement ELMSLAB_LYRA, LyraPickEeveeMovement
 	pause 15
-	disappear ELMSLAB_POKE_BALL1
+	disappear ELMSLAB_POKE_BALL3
 	opentext
-	getmonname CYNDAQUIL, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	writetext LyraNicknamedCyndaquilText
+	writetext LyraPickEeveeText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraAfterCyndaquilMovement
-	applymovement PLAYER, AfterTotodileMovement
+	applymovement ELMSLAB_LYRA, LyraAfterEeveeMovement
+	applymovement PLAYER, AfterKantoMovement
 	sjumpfwd ElmDirectionsScript
 
-ChikoritaPokeBallScript:
+EeveePokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
@@ -284,11 +282,11 @@ ChikoritaPokeBallScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeChikoritaText
+	writetext TakeEeveeText
 	yesorno
 	iffalse_jumpopenedtext DidntChooseStarterText
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_EEVEES_FROM_ELM
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
@@ -298,20 +296,19 @@ ChikoritaPokeBallScript:
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraPicksTotodileMovement
+	applymovement ELMSLAB_LYRA, LyraPickJohtoMovement
 	pause 15
-	disappear ELMSLAB_POKE_BALL2
+	disappear ELMSLAB_POKE_BALL1
 	opentext
-	getmonname TOTODILE, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	writetext LyraNicknamedTotodileText
+	writetext LyraPickJohtoText
 	waitbutton
 	closetext
-	applymovement ELMSLAB_LYRA, LyraAfterTotodileMovement
-	applymovement PLAYER, AfterChikoritaMovement
+	applymovement ELMSLAB_LYRA, LyraAfterJohtoMovement
+	applymovement PLAYER, AfterEeveeMovement
 	; fallthrough
 
 ElmDirectionsScript:
@@ -571,10 +568,8 @@ LyraBattleScript:
 	turnobject PLAYER, RIGHT
 	winlosstext ElmsLabLyraWinText, ElmsLabLyraLossText
 	setlasttalked ELMSLAB_LYRA
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .Chikorita
+	checkevent EVENT_GOT_EEVEE_FROM_ELM
+	iftruefwd .Johto
 	loadtrainer LYRA1, LYRA1_1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -585,19 +580,8 @@ LyraBattleScript:
 	iftruefwd .AfterYourDefeat
 	sjumpfwd .AfterVictorious
 
-.Totodile:
+.Johto:
 	loadtrainer LYRA1, LYRA1_2
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	special DeleteSavedMusic
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
-	iftruefwd .AfterVictorious
-	sjumpfwd .AfterYourDefeat
-
-.Chikorita:
-	loadtrainer LYRA1, LYRA1_3
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -726,17 +710,16 @@ ElmsLab_WalkUpToElmMovement:
 	turn_head_left
 	step_end
 
-LyraPicksChikoritaMovement:
+LyraPickEeveeMovement:
 	step_right
-LyraPicksTotodileMovement:
 	step_right
-LyraPicksCyndaquilMovement:
+LyraPickJohtoMovement:
 	step_right
 	step_right
 	step_up
 	step_end
 
-LyraAfterChikoritaMovement:
+LyraAfterEeveeMovement:
 	step_down
 	step_left
 	step_left
@@ -744,14 +727,7 @@ LyraAfterChikoritaMovement:
 	turn_head_up
 	step_end
 
-LyraAfterTotodileMovement:
-	step_down
-	step_left
-	step_left
-	turn_head_up
-	step_end
-
-LyraAfterCyndaquilMovement:
+LyraAfterJohtoMovement:
 	step_down
 	step_left
 	turn_head_up
@@ -872,20 +848,20 @@ ElmsLab_ElmToDefaultPositionMovement:
 	turn_head_down
 	step_end
 
-AfterCyndaquilMovement:
+AfterJohtoMovement:
 	step_left
 	step_up
 	turn_head_up
 	step_end
 
-AfterTotodileMovement:
+AfterKantoMovement:
 	step_left
 	step_left
 	step_up
 	turn_head_up
 	step_end
 
-AfterChikoritaMovement:
+AfterEeveeMovement:
 	step_left
 	step_left
 	step_left
@@ -1022,21 +998,21 @@ LabWhereGoingText:
 	line "are you going?"
 	done
 
-TakeCyndaquilText:
+TakeJohtoText:
 	text "Elm: You'll take"
 	line "the #mon"
 
 	para "from Johto?"
 	done
 
-TakeTotodileText:
+TakeKantoText:
 	text "Elm: You'll take"
 	line "the #mon"
 
 	para "from Kanto?"
 	done
 
-TakeChikoritaText:
+TakeEeveesText:
 	text "Elm: So, you like"
 	line "these Eevee,"
 
@@ -1631,32 +1607,24 @@ LyraChoosesStarterText:
 
 LyraReceivedStarterText:
 	text "Lyra received"
-	line ""
-	text_ram wStringBuffer3
-	text "!"
+	line "some #mon!"
 	done
 
-LyraNicknamedChikoritaText:
-	text "Lyra: It's so"
-	line "green! I'll nick-"
-	cont "name it Salad!"
+LyraPickEeveeText:
+	text "Lyra: OMG!"
+	line "These Eevees"
+	cont "are SO cute!"
 	done
 
-LyraNicknamedCyndaquilText:
-	text "Lyra: It's so"
-	line "cute! I'll nick-"
-	cont "name it Sizzle!"
-	done
-
-LyraNicknamedTotodileText:
-	text "Lyra: It's so"
-	line "cute! I'll nick-"
-	cont "name it Bubbles!"
+LyraPickJohtoText:
+	text "Lyra: I'm so"
+	line "excited to raise"
+	cont "these #mon!"
 	done
 
 ElmsLabLyraGoodChoiceText:
 	text "Your #mon"
-	line "looks cute too!"
+	line "look cute too!"
 	done
 
 ElmsLabLyraChallengeText:
