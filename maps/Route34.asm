@@ -109,13 +109,11 @@ Route34LyraTrigger2:
 	pause 10
 	showtext Route34LyraChallengeText
 	setevent EVENT_LYRA_ROUTE_34
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .Chikorita
+	checkevent EVENT_GOT_EEVEE_FROM_ELM
+	iftruefwd .Johto
 	winlosstext Route34LyraWinText, Route34LyraLossText
 	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_4
+	loadtrainer LYRA1, LYRA1_3
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -123,24 +121,16 @@ Route34LyraTrigger2:
 	playmusic MUSIC_LYRA_DEPARTURE_HGSS
 	sjumpfwd .AfterBattle
 
-.Totodile:
+.Johto:
 	winlosstext Route34LyraWinText, Route34LyraLossText
 	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_5
+	loadtrainer LYRA1, LYRA1_4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_LYRA_DEPARTURE_HGSS
 	sjumpfwd .AfterBattle
 
-.Chikorita:
-	winlosstext Route34LyraWinText, Route34LyraLossText
-	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_6
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
 .AfterBattle
 	showtext Route34LyraFollowMeText
 	applyonemovement ROUTE34_GRAMPS, slow_step_right
