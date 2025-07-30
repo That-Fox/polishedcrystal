@@ -37,35 +37,13 @@ VictoryRoadRivalLeft:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showtext VictoryRoadRivalBeforeText
 	setevent EVENT_RIVAL_VICTORY_ROAD
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .GotTotodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .GotChikorita
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD2F_RIVAL
-	loadtrainer RIVAL1, RIVAL1_15
+	loadtrainer RIVAL1, RIVAL1_5
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjumpfwd .AfterBattle
-
-.GotTotodile:
-	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
-	setlasttalked VICTORYROAD2F_RIVAL
-	loadtrainer RIVAL1, RIVAL1_13
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjumpfwd .AfterBattle
-
-.GotChikorita:
-	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
-	setlasttalked VICTORYROAD2F_RIVAL
-	loadtrainer RIVAL1, RIVAL1_14
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	; fallthrough
 
 .AfterBattle:
 	special DeleteSavedMusic
