@@ -1404,136 +1404,95 @@ Lyra1Group:
 
 	def_trainer_class LYRA1
 	def_trainer LYRA1_1, "Lyra"
-	tr_mon 5, "Chicory", CHIKORITA
+	tr_mon 5, "Cinder", EEVEE
+	tr_mon 5, "Splash", EEVEE
+	tr_mon 5, "Bloom", EEVEE
 	end_trainer
 
 	def_trainer LYRA1_2, "Lyra"
 	tr_mon 5, "Cinder", CYNDAQUIL
+	tr_mon 5, "Toto", TOTODILE
+	tr_mon 5, "Chicory", CHIKORITA
 	end_trainer
 
 	def_trainer LYRA1_3, "Lyra"
-	tr_mon 5, "Toto", TOTODILE
+	tr_mon 18, "Splash", VAPOREON
+		tr_evs 72 Atk
+	tr_mon 16, "Flash", EEVEE
+	tr_mon 18, "Cinder", FLAREON
+		tr_evs 72 Spe
+	tr_mon 18, "Bloom", LEAFEON @ ORAN_BERRY
+		tr_evs 72 HP
+		tr_moves RAZOR_LEAF, POISONPOWDER, HEALINGLIGHT, REFLECT
 	end_trainer
 
 	def_trainer LYRA1_4, "Lyra"
 	tr_mon 16, PIDGEY
 		tr_evs 36 HP, 36 Spe
 		tr_moves TACKLE, GUST, MUD_SLAP, QUICK_ATTACK ; default for level
-	tr_mon 17, MARILL
+	tr_mon 18, "Toto", CROCONAW
 		tr_evs 72 Atk
-		tr_moves DEFENSE_CURL, ROLLOUT, BUBBLE_BEAM, DIZZY_PUNCH ; default for level
-	tr_mon 15, MAREEP
-		tr_evs 36 HP, 36 SAt
-		tr_moves THUNDER_WAVE, THUNDERSHOCK, MUD_SLAP, SPARK ; default for level
+	tr_mon 18, "Cinder", QUILAVA
+		tr_evs 72 Spe
 	tr_mon 18, "Chicory", BAYLEEF @ ORAN_BERRY
 		tr_evs 72 HP
 		tr_moves RAZOR_LEAF, POISONPOWDER, HEALINGLIGHT, REFLECT ; No Light Screen
 	end_trainer
 
 	def_trainer LYRA1_5, "Lyra"
-	tr_mon 16, PIDGEY
-		tr_evs 36 HP, 36 Spe
-	tr_mon 17, SUNKERN
-		tr_evs 36 SAt, 36 Spe
-	tr_mon 15, MAREEP
-		tr_evs 36 HP, 36 SAt
-	tr_mon 18, "Cinder", QUILAVA @ ORAN_BERRY
-		tr_evs 72 Spe
-	end_trainer
-
-	def_trainer LYRA1_6, "Lyra"
-	tr_mon 16, PIDGEY
-		tr_evs 36 HP, 36 Spe
-	tr_mon 17, GROWLITHE
-		tr_evs 36 HP, 36 Atk
-	tr_mon 15, MAREEP
-		tr_evs 36 HP, 36 SAt
-	tr_mon 18, "Toto", CROCONAW @ ORAN_BERRY
-		tr_evs 72 Atk
-	end_trainer
-
-	def_trainer LYRA1_7, "Lyra"
-	tr_mon 33, PIDGEOTTO
-		tr_evs 100 HP, 100 Spe
-	tr_mon 34, GROWLITHE
-		tr_evs 100 HP, 100 Atk
-	tr_mon 34, AZUMARILL
+	tr_mon 36, "Splash", VAPOREON
 		tr_evs 200 Atk
-	tr_mon 32, FLAAFFY
+	tr_mon 32, "Flash", JOLTEON
 		tr_evs 100 HP, 100 SAt
-	tr_mon 37, "Chicory", BAYLEEF @ ORAN_BERRY
+	tr_mon 33, "Rangi", EEVEE
+		tr_evs 100 HP, 100 Spe
+	tr_mon 37, "Cinder", FLAREON
+		tr_evs 200 Spe
+	tr_mon 37, "Bloom", LEAFEON @ ORAN_BERRY
 		tr_evs 200 HP
 	end_trainer
 
-	def_trainer LYRA1_8, "Lyra"
+	def_trainer LYRA1_6, "Lyra"
 	tr_mon 33, PIDGEOTTO
 		tr_evs 100 HP, 100 Spe
-	tr_mon 34, SUNFLORA
-		tr_evs 100 SAt, 100 Spe
-	tr_mon 34, AZUMARILL
-		tr_evs 200 Atk
-	tr_mon 32, FLAAFFY
-		tr_evs 100 HP, 100 SAt
-	tr_mon 37, "Cinder", QUILAVA @ ORAN_BERRY
+	tr_mon 37, "Cinder", QUILAVA
 		tr_evs 200 Spe
-	end_trainer
-
-	def_trainer LYRA1_9, "Lyra"
-	tr_mon 33, PIDGEOTTO
-		tr_evs 100 HP, 100 Spe
-	tr_mon 34, SUNFLORA
-		tr_evs 100 SAt, 100 Spe
-	tr_mon 34, GROWLITHE
-		tr_evs 100 HP, 100 Atk
-	tr_mon 32, FLAAFFY
-		tr_evs 100 HP, 100 SAt
 	tr_mon 37, "Toto", CROCONAW @ ORAN_BERRY
 		tr_evs 200 Atk
+	tr_mon 32, FLAAFFY
+		tr_evs 100 HP, 100 SAt
+	tr_mon 37, "Chicory", BAYLEEF
+		tr_evs 200 HP
 	end_trainer
 
-	def_trainer LYRA1_10, "Lyra"
-	tr_mon 44, PIDGEOT
+	def_trainer LYRA1_7, "Lyra"
+	tr_mon 44, "Rangi", GLACEON
 		tr_evs 132 HP, 132 Spe
-	tr_mon 43, GIRAFARIG
+	tr_mon 43, "Sylvie", SYLVEON
 		tr_evs 132 Atk, 132 Spe
-	tr_mon 45, ARCANINE
-		tr_evs 132 HP, 132 Atk
-	tr_mon 45, AZUMARILL
+	tr_mon 47, "Cinder", FLAREON @ SITRUS_BERRY
+		tr_evs 12 Atk, 252 Spe
+	tr_mon 47, "Splash", VAPOREON
 		tr_evs 252 Atk, 12 Spe
-	tr_mon 46, AMPHAROS
+	tr_mon 46, "Flash", JOLTEON
 		tr_evs 132 HP, 132 SAt
-	tr_mon 47, "Chicory", MEGANIUM @ SITRUS_BERRY
+	tr_mon 47, "Bloom", LEAFEON
 		tr_evs 252 HP, 12 SAt
 	end_trainer
 
-	def_trainer LYRA1_11, "Lyra"
+	def_trainer LYRA1_8, "Lyra"
 	tr_mon 44, PIDGEOT
 		tr_evs 132 HP, 132 Spe
 	tr_mon 43, GIRAFARIG
 		tr_evs 132 Atk, 132 Spe
-	tr_mon 45, SUNFLORA
-		tr_evs 132 SAt, 132 Spe
-	tr_mon 45, AZUMARILL
-		tr_evs 252 Atk, 12 Spe
-	tr_mon 46, AMPHAROS
-		tr_evs 132 HP, 132 SAt
 	tr_mon 47, "Cinder", TYPHLOSION @ SITRUS_BERRY
 		tr_evs 12 Atk, 252 Spe
-	end_trainer
-
-	def_trainer LYRA1_12, "Lyra"
-	tr_mon 44, PIDGEOT
-		tr_evs 132 HP, 132 Spe
-	tr_mon 43, GIRAFARIG
-		tr_evs 132 Atk, 132 Spe
-	tr_mon 45, SUNFLORA
-		tr_evs 132 SAt, 132 Spe
-	tr_mon 45, ARCANINE
-		tr_evs 132 HP, 132 Atk
+	tr_mon 47, "Toto", FERALIGATR
+		tr_evs 252 Atk, 12 Spe
 	tr_mon 46, AMPHAROS
 		tr_evs 132 HP, 132 SAt
-	tr_mon 47, "Toto", FERALIGATR @ SITRUS_BERRY
-		tr_evs 252 Atk, 12 Spe
+	tr_mon 47, "Chicory", MEGANIUM
+		tr_evs 252 HP, 12 SAt
 	end_trainer
 
 
@@ -1542,30 +1501,21 @@ Lyra2Group:
 
 	def_trainer_class LYRA2
 	def_trainer 1, "Lyra"
-	tr_mon 69, PIDGEOT
-	tr_mon 70, ARCANINE
-	tr_mon 70, AZUMARILL
-	tr_mon 71, AMPHAROS
-	tr_mon 68, FARIGIRAF
-	tr_mon 72, "Chicory", MEGANIUM @ SITRUS_BERRY
+	tr_mon 69, "Sylvie", SYLVEON
+	tr_mon 72, "Bloom", LEAFEON
+	tr_mon 72, "Splash", VAPOREON
+	tr_mon 71, "Flash", JOLTEON
+	tr_mon 70, "Rangi", GLACEON
+	tr_mon 72, "Cinder", FLAREON @ SITRUS_BERRY
 	end_trainer
 
 	def_trainer 2, "Lyra"
 	tr_mon 69, PIDGEOT
-	tr_mon 70, SUNFLORA
-	tr_mon 70, AZUMARILL
+	tr_mon 72, "Chicory", MEGANIUM
+	tr_mon 72, "Toto", FERALIGATR
 	tr_mon 71, AMPHAROS
-	tr_mon 68, FARIGIRAF
+	tr_mon 70, FARIGIRAF
 	tr_mon 72, "Cinder", TYPHLOSION @ SITRUS_BERRY
-	end_trainer
-
-	def_trainer 3, "Lyra"
-	tr_mon 69, PIDGEOT
-	tr_mon 70, SUNFLORA
-	tr_mon 70, ARCANINE
-	tr_mon 71, AMPHAROS
-	tr_mon 68, FARIGIRAF
-	tr_mon 72, "Toto", FERALIGATR @ SITRUS_BERRY
 	end_trainer
 
 
