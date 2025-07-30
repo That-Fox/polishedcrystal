@@ -1095,6 +1095,7 @@ Rival1Group:
 		tr_moves MUD_SLAP, RAPID_SPIN, ROLLOUT, MAGNITUDE ; default for level
 	tr_mon 18, RHYHORN @ ORAN_BERRY
 		tr_evs 72 Atk
+		tr_moves HORN_ATTACK, MAGNITUDE, STOMP, TACKLE
 	end_trainer
 
 
@@ -1113,6 +1114,7 @@ Rival1Group:
 		tr_moves LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	tr_mon 22, RHYHORN @ ORAN_BERRY
 		tr_evs 104 Atk
+		tr_moves HORN_ATTACK, MAGNITUDE, STOMP, BULLDOZE
 	end_trainer
 
 	def_trainer RIVAL1_4, "<RIVAL>"
