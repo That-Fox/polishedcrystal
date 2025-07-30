@@ -1074,17 +1074,7 @@ Rival0Group:
 	def_trainer_class RIVAL0
 	def_trainer 1, "boy"
 	tr_mon 4, RATTATA
-	tr_mon 5, CHIKORITA @ ORAN_BERRY
-	end_trainer
-
-	def_trainer 2, "boy"
-	tr_mon 4, RATTATA
-	tr_mon 5, CYNDAQUIL @ ORAN_BERRY
-	end_trainer
-
-	def_trainer 3, "boy"
-	tr_mon 4, RATTATA
-	tr_mon 5, TOTODILE @ ORAN_BERRY
+	tr_mon 5, RHYHORN @ ORAN_BERRY
 	end_trainer
 
 
@@ -1093,7 +1083,7 @@ Rival1Group:
 
 	; For EV spreads, keep continuity until pre-E4 (need Surf to lose EVs).
 	def_trainer_class RIVAL1
-	def_trainer RIVAL1_4, "<RIVAL>"
+	def_trainer RIVAL1_2, "<RIVAL>"
 	tr_mon 14, GASTLY
 		tr_evs 72 Spe
 		tr_moves LICK, DISABLE, MEAN_LOOK, CURSE ; default for level
@@ -1103,142 +1093,47 @@ Rival1Group:
 	tr_mon 15, GEODUDE
 		tr_evs 72 HP
 		tr_moves MUD_SLAP, RAPID_SPIN, ROLLOUT, MAGNITUDE ; default for level
-	tr_mon 18, BAYLEEF @ ORAN_BERRY
+	tr_mon 18, RHYHORN @ ORAN_BERRY
 		tr_evs 72 Atk
-		tr_moves RAZOR_LEAF, POISONPOWDER, HEALINGLIGHT, REFLECT ; No Light Screen
+	end_trainer
+
+
+	def_trainer RIVAL1_3, "<RIVAL>"
+	tr_mon 20, HAUNTER
+		tr_evs 104 Spe
+		tr_moves LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
+	tr_mon 18, MAGNEMITE
+		tr_evs 104 Spe
+		tr_moves TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
+	tr_mon 19, DROWZEE
+		tr_evs 104 Spe
+		tr_moves HYPNOSIS, CONFUSION, HEADBUTT, LOW_KICK
+	tr_mon 20, ZUBAT
+		tr_evs 104 Spe
+		tr_moves LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
+	tr_mon 22, RHYHORN @ ORAN_BERRY
+		tr_evs 104 Atk
+	end_trainer
+
+	def_trainer RIVAL1_4, "<RIVAL>"
+	tr_mon 40, GOLBAT
+		tr_evs 116 Atk, 116 Spe
+		tr_moves LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
+	tr_mon 39, MAGNETON
+		tr_evs 116 SAt, 116 Spe
+		tr_moves TRI_ATTACK, THUNDERBOLT, FLASH_CANNON, THUNDER_WAVE
+	tr_mon 39, HAUNTER
+		tr_evs 232 Spe
+		tr_moves PAIN_SPLIT, MEAN_LOOK, CONFUSE_RAY, SHADOW_BALL
+	tr_mon 41, SNEASEL
+		tr_evs 232 Atk
+		tr_moves SLASH, ICE_PUNCH, HONE_CLAWS, FEINT_ATTACK
+	tr_mon 43, RHYDON @ SITRUS_BERRY
+		tr_evs 160 Atk, 72 Spe
+		tr_moves TAKE_DOWN, STONE_EDGE, ROCK_BLAST, ANCIENTPOWER
 	end_trainer
 
 	def_trainer RIVAL1_5, "<RIVAL>"
-	tr_mon 14, GASTLY
-		tr_evs 72 Spe
-	tr_mon 16, ZUBAT
-		tr_evs 72 Spe
-	tr_mon 15, GEODUDE
-		tr_evs 72 HP
-	tr_mon 18, QUILAVA @ ORAN_BERRY
-		tr_evs 72 SAt
-	end_trainer
-
-	def_trainer RIVAL1_6, "<RIVAL>"
-	tr_mon 14, GASTLY
-		tr_evs 72 Spe
-	tr_mon 16, ZUBAT
-		tr_evs 72 Spe
-	tr_mon 15, GEODUDE
-		tr_evs 72 HP
-	tr_mon 18, CROCONAW @ ORAN_BERRY
-		tr_evs 72 Spe
-	end_trainer
-
-	def_trainer RIVAL1_7, "<RIVAL>"
-	tr_mon 20, HAUNTER
-		tr_evs 104 Spe
-		tr_moves LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	tr_mon 18, MAGNEMITE
-		tr_evs 104 Spe
-		tr_moves TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	tr_mon 19, DROWZEE
-		tr_evs 104 Spe
-		tr_moves HYPNOSIS, CONFUSION, HEADBUTT, LOW_KICK
-	tr_mon 20, ZUBAT
-		tr_evs 104 Spe
-		tr_moves LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	tr_mon 22, BAYLEEF @ ORAN_BERRY
-		tr_evs 72 Atk, 32 SAt
-		tr_moves REFLECT, RAZOR_LEAF, POISONPOWDER, DISARM_VOICE
-	end_trainer
-
-	def_trainer RIVAL1_8, "<RIVAL>"
-	tr_mon 20, HAUNTER
-		tr_evs 104 Spe
-		tr_moves LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	tr_mon 18, MAGNEMITE
-		tr_evs 104 Spe
-		tr_moves TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	tr_mon 19, DROWZEE
-		tr_evs 104 Spe
-		tr_moves HYPNOSIS, CONFUSION, HEADBUTT, LOW_KICK
-	tr_mon 20, ZUBAT
-		tr_evs 104 Spe
-		tr_moves LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	tr_mon 22, QUILAVA @ ORAN_BERRY
-		tr_evs 72 SAt, 32 Spe
-		tr_moves LEER, SMOKESCREEN, EMBER, QUICK_ATTACK
-	end_trainer
-
-	def_trainer RIVAL1_9, "<RIVAL>"
-	tr_mon 20, HAUNTER
-		tr_evs 104 Spe
-		tr_moves LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	tr_mon 18, MAGNEMITE
-		tr_evs 104 Spe
-		tr_moves TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	tr_mon 19, DROWZEE
-		tr_evs 104 Spe
-		tr_moves HYPNOSIS, CONFUSION, HEADBUTT, LOW_KICK
-	tr_mon 20, ZUBAT
-		tr_evs 104 Spe
-		tr_moves LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	tr_mon 22, CROCONAW @ ORAN_BERRY
-		tr_evs 32 Atk, 72 Spe
-		tr_moves LEER, RAGE, WATER_GUN, BITE
-	end_trainer
-
-	def_trainer RIVAL1_10, "<RIVAL>"
-	tr_mon 40, GOLBAT
-		tr_evs 116 Atk, 116 Spe
-		tr_moves LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
-	tr_mon 39, MAGNETON
-		tr_evs 116 SAt, 116 Spe
-		tr_moves TRI_ATTACK, THUNDERBOLT, FLASH_CANNON, THUNDER_WAVE
-	tr_mon 39, HAUNTER
-		tr_evs 232 Spe
-		tr_moves PAIN_SPLIT, MEAN_LOOK, CONFUSE_RAY, SHADOW_BALL
-	tr_mon 41, SNEASEL
-		tr_evs 232 Atk
-		tr_moves SLASH, ICE_PUNCH, HONE_CLAWS, FEINT_ATTACK
-	tr_mon 43, MEGANIUM @ SITRUS_BERRY
-		tr_evs 72 Atk, 160 SAt ; Still has some Atk EVs for continuity
-		tr_moves REFLECT, LIGHT_SCREEN, PETAL_DANCE, ANCIENTPOWER
-	end_trainer
-
-	def_trainer RIVAL1_11, "<RIVAL>"
-	tr_mon 40, GOLBAT
-		tr_evs 116 Atk, 116 Spe
-		tr_moves LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
-	tr_mon 39, MAGNETON
-		tr_evs 116 SAt, 116 Spe
-		tr_moves TRI_ATTACK, THUNDERBOLT, FLASH_CANNON, THUNDER_WAVE
-	tr_mon 39, HAUNTER
-		tr_evs 232 Spe
-		tr_moves PAIN_SPLIT, MEAN_LOOK, CONFUSE_RAY, SHADOW_BALL
-	tr_mon 41, SNEASEL
-		tr_evs 232 Atk
-		tr_moves SLASH, ICE_PUNCH, HONE_CLAWS, FEINT_ATTACK
-	tr_mon 43, TYPHLOSION @ SITRUS_BERRY
-		tr_evs 88 Atk, 72 SAt, 72 Spe
-		tr_moves SMOKESCREEN, FLAME_CHARGE, DIG, SWIFT
-	end_trainer
-
-	def_trainer RIVAL1_12, "<RIVAL>"
-	tr_mon 40, GOLBAT
-		tr_evs 116 Atk, 116 Spe
-		tr_moves LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
-	tr_mon 39, MAGNETON
-		tr_evs 116 SAt, 116 Spe
-		tr_moves TRI_ATTACK, THUNDERBOLT, FLASH_CANNON, THUNDER_WAVE
-	tr_mon 39, HAUNTER
-		tr_evs 232 Spe
-		tr_moves PAIN_SPLIT, MEAN_LOOK, CONFUSE_RAY, SHADOW_BALL
-	tr_mon 41, SNEASEL
-		tr_evs 232 Atk
-		tr_moves SLASH, ICE_PUNCH, HONE_CLAWS, FEINT_ATTACK
-	tr_mon 43, FERALIGATR @ SITRUS_BERRY
-		tr_evs 160 Atk, 72 Spe
-		tr_moves SLASH, SURF, CRUNCH, NIGHT_SLASH
-	end_trainer
-
-	def_trainer RIVAL1_13, "<RIVAL>"
 	tr_mon 45, WEAVILE @ KINGS_ROCK
 		tr_moves SWORDS_DANCE, SCREECH, NIGHT_SLASH, X_SCISSOR
 	tr_mon 47, GOLBAT @ EVIOLITE
@@ -1249,40 +1144,9 @@ Rival1Group:
 		tr_moves MEAN_LOOK, DARK_PULSE, SHADOW_BALL, CONFUSE_RAY
 	tr_mon 46, ALAKAZAM @ BRIGHTPOWDER
 		tr_moves DISABLE, PSYCHIC_M, RECOVER, CONFUSE_RAY
-	tr_mon 49, MEGANIUM @ SITRUS_BERRY
-		tr_moves REFLECT, LIGHT_SCREEN, ENERGY_BALL, ANCIENTPOWER
+	tr_mon 49, RHYPERIOR @ SITRUS_BERRY
+		tr_moves EARTHQUAKE, STONE_EDGE, MEGAHORN, ANCIENTPOWER
 	end_trainer
-
-	def_trainer RIVAL1_14, "<RIVAL>"
-	tr_mon 45, WEAVILE @ KINGS_ROCK
-		tr_moves SWORDS_DANCE, SCREECH, NIGHT_SLASH, X_SCISSOR
-	tr_mon 47, GOLBAT @ EVIOLITE
-		tr_moves POISON_JAB, SUPER_FANG, CONFUSE_RAY, WING_ATTACK
-	tr_mon 46, MAGNETON @ MAGNET
-		tr_moves THUNDERBOLT, TRI_ATTACK, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 46, GENGAR @ SPELL_TAG
-		tr_moves MEAN_LOOK, DARK_PULSE, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 46, ALAKAZAM @ BRIGHTPOWDER
-		tr_moves DISABLE, PSYCHIC_M, RECOVER, CONFUSE_RAY
-	tr_mon 49, TYPHLOSION @ SITRUS_BERRY
-		tr_moves SMOKESCREEN, QUICK_ATTACK, DIG, FLAMETHROWER
-	end_trainer
-
-	def_trainer RIVAL1_15, "<RIVAL>"
-	tr_mon 45, WEAVILE @ KINGS_ROCK
-		tr_moves SWORDS_DANCE, SCREECH, NIGHT_SLASH, X_SCISSOR
-	tr_mon 47, GOLBAT @ EVIOLITE
-		tr_moves POISON_JAB, SUPER_FANG, CONFUSE_RAY, WING_ATTACK
-	tr_mon 46, MAGNETON @ MAGNET
-		tr_moves THUNDERBOLT, TRI_ATTACK, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 46, GENGAR @ SPELL_TAG
-		tr_moves MEAN_LOOK, DARK_PULSE, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 46, ALAKAZAM @ BRIGHTPOWDER
-		tr_moves DISABLE, PSYCHIC_M, RECOVER, CONFUSE_RAY
-	tr_mon 49, FERALIGATR @ SITRUS_BERRY
-		tr_moves CRUNCH, SURF, SLASH, SCARY_FACE
-	end_trainer
-
 
 SECTION "Rival2Group", ROMX
 Rival2Group:
@@ -1304,54 +1168,12 @@ Rival2Group:
 	tr_mon 63, ALAKAZAM @ BRIGHTPOWDER
 		tr_evs 252 SAt, 204 Spe
 		tr_moves DISABLE, RECOVER, FUTURE_SIGHT, PSYCHIC_M
-	tr_mon 65, MEGANIUM @ MIRACLE_SEED
+	tr_mon 65, RHYPERIOR @ MIRACLE_SEED
 		tr_evs 252 Atk, 204 Spe
-		tr_moves SEED_BOMB, POISONPOWDER, BODY_SLAM, LIGHT_SCREEN
+		tr_moves EARTHQUAKE, STONE_EDGE, MEGAHORN, ANCIENTPOWER
 	end_trainer
 
 	def_trainer 2, "<RIVAL>"
-	tr_mon 61, WEAVILE @ KINGS_ROCK
-		tr_evs 252 Atk, 204 Spe
-		tr_moves SWORDS_DANCE, ICE_PUNCH, SLASH, CRUNCH
-	tr_mon 62, GOLBAT @ EVIOLITE
-		tr_evs 252 HP, 204 Atk
-		tr_moves POISON_JAB, SUPER_FANG, CONFUSE_RAY, AERIAL_ACE
-	tr_mon 61, MAGNEZONE @ MAGNET
-		tr_evs 252 SAt, 204 Spe
-		tr_moves TRI_ATTACK, ZAP_CANNON, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 63, GENGAR @ SPELL_TAG
-		tr_evs 252 SAt, 204 Spe
-		tr_moves MEAN_LOOK, CURSE, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 63, ALAKAZAM @ BRIGHTPOWDER
-		tr_evs 252 SAt, 204 Spe
-		tr_moves DISABLE, RECOVER, FUTURE_SIGHT, PSYCHIC_M
-	tr_mon 65, TYPHLOSION @ CHARCOAL
-		tr_evs 204 Atk, 252 SAt
-		tr_moves FLAMETHROWER, EARTH_POWER, THUNDERPUNCH, SMOKESCREEN
-	end_trainer
-
-	def_trainer 3, "<RIVAL>"
-	tr_mon 61, WEAVILE @ KINGS_ROCK
-		tr_evs 252 Atk, 204 Spe
-		tr_moves SWORDS_DANCE, ICE_PUNCH, SLASH, CRUNCH
-	tr_mon 62, GOLBAT @ EVIOLITE
-		tr_evs 252 HP, 204 Atk
-		tr_moves POISON_JAB, SUPER_FANG, CONFUSE_RAY, AERIAL_ACE
-	tr_mon 61, MAGNEZONE @ MAGNET
-		tr_evs 252 SAt, 204 Spe
-		tr_moves TRI_ATTACK, ZAP_CANNON, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 63, GENGAR @ SPELL_TAG
-		tr_evs 252 SAt, 204 Spe
-		tr_moves MEAN_LOOK, CURSE, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 63, ALAKAZAM @ BRIGHTPOWDER
-		tr_evs 252 SAt, 204 Spe
-		tr_moves DISABLE, RECOVER, FUTURE_SIGHT, PSYCHIC_M
-	tr_mon 65, FERALIGATR @ MYSTIC_WATER
-		tr_evs 204 Atk, 252 Spe
-		tr_moves WATERFALL, CRUNCH, SLASH, SCARY_FACE
-	end_trainer
-
-	def_trainer 4, "<RIVAL>"
 	tr_mon 68, WEAVILE @ KINGS_ROCK
 		tr_moves SWORDS_DANCE, ICE_PUNCH, SLASH, CRUNCH
 	tr_mon 69, CROBAT @ POISON_BARB
@@ -1362,38 +1184,8 @@ Rival2Group:
 		tr_moves THUNDERBOLT, FOCUS_BLAST, SHADOW_BALL, CONFUSE_RAY
 	tr_mon 70, ALAKAZAM @ BRIGHTPOWDER
 		tr_moves RECOVER, TRI_ATTACK, PSYCHIC_M, REFLECT
-	tr_mon 72, MEGANIUM @ LEFTOVERS
-		tr_moves PETAL_DANCE, MOONBLAST, LIGHT_SCREEN, ANCIENTPOWER
-	end_trainer
-
-	def_trainer 5, "<RIVAL>"
-	tr_mon 68, WEAVILE @ KINGS_ROCK
-		tr_moves SWORDS_DANCE, ICE_PUNCH, SLASH, CRUNCH
-	tr_mon 69, CROBAT @ POISON_BARB
-		tr_moves POISON_JAB, CRUNCH, CONFUSE_RAY, TOXIC
-	tr_mon 68, MAGNEZONE @ MAGNET
-		tr_moves THUNDERBOLT, TRI_ATTACK, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 70, GENGAR @ SPELL_TAG
-		tr_moves THUNDERBOLT, FOCUS_BLAST, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 70, ALAKAZAM @ BRIGHTPOWDER
-		tr_moves RECOVER, TRI_ATTACK, PSYCHIC_M, REFLECT
-	tr_mon 72, TYPHLOSION @ LEFTOVERS
-		tr_moves FIRE_BLAST, FOCUS_BLAST, EARTH_POWER, SMOKESCREEN
-	end_trainer
-
-	def_trainer 6, "<RIVAL>"
-	tr_mon 68, WEAVILE @ KINGS_ROCK
-		tr_moves SWORDS_DANCE, ICE_PUNCH, SLASH, CRUNCH
-	tr_mon 69, CROBAT @ POISON_BARB
-		tr_moves POISON_JAB, CRUNCH, CONFUSE_RAY, TOXIC
-	tr_mon 68, MAGNEZONE @ MAGNET
-		tr_moves THUNDERBOLT, TRI_ATTACK, THUNDER_WAVE, FLASH_CANNON
-	tr_mon 70, GENGAR @ SPELL_TAG
-		tr_moves THUNDERBOLT, FOCUS_BLAST, SHADOW_BALL, CONFUSE_RAY
-	tr_mon 70, ALAKAZAM @ BRIGHTPOWDER
-		tr_moves RECOVER, TRI_ATTACK, PSYCHIC_M, REFLECT
-	tr_mon 72, FERALIGATR @ LEFTOVERS
-		tr_moves SURF, CRUNCH, SLASH, OUTRAGE
+	tr_mon 72, RHYPERIOR @ LEFTOVERS
+		tr_moves EARTHQUAKE, GYRO_BALL, SWORDS_DANCE, ANCIENTPOWER
 	end_trainer
 
 ; TODO: give Lyra custom movesets
