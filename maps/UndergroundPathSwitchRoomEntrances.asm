@@ -180,35 +180,13 @@ UndergroundRivalBattleScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showtext UndergroundRivalBeforeText
 	setevent EVENT_RIVAL_UNDERGROUND_PATH
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .Chikorita
 	winlosstext UndergroundRivalWinText, UndergroundRivalLossText
 	setlasttalked UNDERGROUNDPATHSWITCHROOMENTRANCES_RIVAL
-	loadtrainer RIVAL1, RIVAL1_12
+	loadtrainer RIVAL1, RIVAL1_4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjumpfwd .FinishRivalBattle
-
-.Totodile:
-	winlosstext UndergroundRivalWinText, UndergroundRivalLossText
-	setlasttalked UNDERGROUNDPATHSWITCHROOMENTRANCES_RIVAL
-	loadtrainer RIVAL1, RIVAL1_10
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjumpfwd .FinishRivalBattle
-
-.Chikorita:
-	winlosstext UndergroundRivalWinText, UndergroundRivalLossText
-	setlasttalked UNDERGROUNDPATHSWITCHROOMENTRANCES_RIVAL
-	loadtrainer RIVAL1, RIVAL1_11
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	; fallthrough
 
 .FinishRivalBattle:
 	special DeleteSavedMusic
