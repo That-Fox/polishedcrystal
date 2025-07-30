@@ -1217,20 +1217,17 @@ Lyra1Group:
 		tr_evs 72 Spe
 	tr_mon 18, "Bloom", LEAFEON @ ORAN_BERRY
 		tr_evs 72 HP
-		tr_moves RAZOR_LEAF, POISONPOWDER, HEALINGLIGHT, REFLECT
 	end_trainer
 
 	def_trainer LYRA1_4, "Lyra"
 	tr_mon 16, PIDGEY
 		tr_evs 36 HP, 36 Spe
-		tr_moves TACKLE, GUST, MUD_SLAP, QUICK_ATTACK ; default for level
 	tr_mon 18, "Toto", CROCONAW
 		tr_evs 72 Atk
 	tr_mon 18, "Cinder", QUILAVA
 		tr_evs 72 Spe
 	tr_mon 18, "Chicory", BAYLEEF @ ORAN_BERRY
 		tr_evs 72 HP
-		tr_moves RAZOR_LEAF, POISONPOWDER, HEALINGLIGHT, REFLECT ; No Light Screen
 	end_trainer
 
 	def_trainer LYRA1_5, "Lyra"
