@@ -1024,22 +1024,23 @@ LabWhereGoingText:
 
 TakeCyndaquilText:
 	text "Elm: You'll take"
-	line "the new"
-	cont "generation"
-	line "of #mon?"
+	line "the #mon"
+
+	para "from Johto?"
 	done
 
 TakeTotodileText:
 	text "Elm: You'll take"
-	line "the old"
-	cont "generation"
-	line "of #mon?"
+	line "the #mon"
+
+	para "from Kanto?"
 	done
 
 TakeChikoritaText:
 	text "Elm: So, you like"
-	line "these Eevee, the"
-	cont "adaptable"
+	line "these Eevee,"
+
+	para "the adaptable"
 	line "#mon?"
 	done
 
@@ -1337,11 +1338,11 @@ AideText_ThiefReturnedMon:
 	cont "equipment at him."
 
 	para "I think a glass"
-	line "flash hit him"
+	line "flask hit him"
 	cont "in the head."
 
 	para "The thief stopped"
-	line "Right away and ran."
+	line "right away and ran."
 
 	para "I saw the boy's"
 	line "face as he left."
@@ -1746,7 +1747,9 @@ ElmsLabTravelTip1Text:
 	para "To advance the"
 	line "game you need to"
 	cont "travel. Not just"
-	line "read books. Go!"
+
+	para "read books."
+	line "Now get out there!"
 	done
 
 ElmsLabTravelTip2Text:
@@ -1795,7 +1798,8 @@ ElmsLabPCText:
 
 	para "It looks like"
 	line "he is reading"
-	cont "A story about"
+
+	para "A story about"
 	line "Typhlosion..."
 
 	para "...and a girl?"
