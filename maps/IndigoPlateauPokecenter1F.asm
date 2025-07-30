@@ -151,11 +151,8 @@ PlateauRivalBattleTrigger2:
 	waitbutton
 	closetext
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_LYRA
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .LyraTotodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .LyraChikorita
-	; Cyndaquil
+	checkevent EVENT_GOT_EEVEE_FROM_ELM
+	iftruefwd .LyraJohto
 	winlosstext PlateauLyraWinText, PlateauLyraLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_LYRA
 	loadtrainer LYRA2, 1
@@ -164,7 +161,7 @@ PlateauRivalBattleTrigger2:
 	reloadmapafterbattle
 	sjumpfwd .LyraPostBattle
 
-.LyraTotodile:
+.LyraJohto:
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_LYRA
 	loadtrainer LYRA2, 2
@@ -173,13 +170,6 @@ PlateauRivalBattleTrigger2:
 	reloadmapafterbattle
 	sjumpfwd .LyraPostBattle
 
-.LyraChikorita:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_LYRA
-	loadtrainer LYRA2, 3
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
 .LyraPostBattle:
 	special DeleteSavedMusic
 	playmusic MUSIC_LYRA_DEPARTURE_HGSS
