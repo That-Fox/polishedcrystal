@@ -78,35 +78,13 @@ AzaleaTownRivalBattleTrigger2:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showtext .SeenText
 	setevent EVENT_RIVAL_AZALEA_TOWN
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .Chikorita
 	winlosstext .WinText, .LossText
 	setlasttalked AZALEATOWN_RIVAL
-	loadtrainer RIVAL1, RIVAL1_6
+	loadtrainer RIVAL1, RIVAL1_2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjumpfwd .AfterBattle
-
-.Totodile:
-	winlosstext .WinText, .LossText
-	setlasttalked AZALEATOWN_RIVAL
-	loadtrainer RIVAL1, RIVAL1_4
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjumpfwd .AfterBattle
-
-.Chikorita:
-	winlosstext .WinText, .LossText
-	setlasttalked AZALEATOWN_RIVAL
-	loadtrainer RIVAL1, RIVAL1_5
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	; fallthrough
 
 .AfterBattle:
 	special DeleteSavedMusic
