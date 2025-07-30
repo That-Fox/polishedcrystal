@@ -88,35 +88,14 @@ PlateauRivalBattleTrigger2:
 	faceobject PLAYER, INDIGOPLATEAUPOKECENTER1F_RIVAL
 	showtext PlateauRivalText1
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .RivalTotodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .RivalChikorita
-	; Cyndaquil
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
-	loadtrainer RIVAL2, 6
+	loadtrainer RIVAL2, 2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjumpfwd .RivalPostBattle
 
-.RivalTotodile:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
-	loadtrainer RIVAL2, 4
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjumpfwd .RivalPostBattle
-
-.RivalChikorita:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
-	loadtrainer RIVAL2, 5
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
 .RivalPostBattle:
 	special DeleteSavedMusic
 	playmusic MUSIC_RIVAL_AFTER
