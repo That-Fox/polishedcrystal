@@ -17,8 +17,8 @@ In the installer, select the following packages: `git`, `make`, and `gcc-core`.
 In the **Cygwin terminal**:
 
 ```bash
-git clone https://github.com/Rangi42/polishedcrystal.git
-cd polishedcrystal
+git clone https://github.com/That-Fox/polishedcrystal-TF.git
+cd polishedcrystal-TF
 mkdir rgbds
 ```
 
@@ -53,8 +53,8 @@ cd rgbds
 sudo make install
 cd ..
 
-git clone https://github.com/Rangi42/polishedcrystal.git
-cd polishedcrystal
+git clone https://github.com/That-Fox/polishedcrystal-TF.git
+cd polishedcrystal-TF
 ```
 
 To build **polishedcrystal.gbc**:
@@ -82,8 +82,8 @@ xcode-select --install
 
 brew install rgbds
 
-git clone https://github.com/Rangi42/polishedcrystal.git
-cd polishedcrystal
+git clone https://github.com/That-Fox/polishedcrystal-TF.git
+cd polishedcrystal-TF
 ```
 
 To build **polishedcrystal.gbc**:
