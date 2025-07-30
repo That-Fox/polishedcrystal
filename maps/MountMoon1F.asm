@@ -43,19 +43,6 @@ MountMoon1FTrigger0:
 	turnobject PLAYER, LEFT
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showtext MountMoonRivalTextBefore
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .Chikorita
-	winlosstext MountMoonRivalTextWin, MountMoonRivalTextLoss
-	setlasttalked MOUNTMOON1F_RIVAL
-	loadtrainer RIVAL2, 3
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjumpfwd .FinishBattle
-
-.Totodile:
 	winlosstext MountMoonRivalTextWin, MountMoonRivalTextLoss
 	setlasttalked MOUNTMOON1F_RIVAL
 	loadtrainer RIVAL2, 1
@@ -63,15 +50,6 @@ MountMoon1FTrigger0:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjumpfwd .FinishBattle
-
-.Chikorita:
-	winlosstext MountMoonRivalTextWin, MountMoonRivalTextLoss
-	setlasttalked MOUNTMOON1F_RIVAL
-	loadtrainer RIVAL2, 2
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	; fallthrough
 
 .FinishBattle:
 	special DeleteSavedMusic
