@@ -118,19 +118,9 @@ DayCareLadyScript:
 	iftruefwd .NoLyrasEgg
 	writetext DayCareLadyText_GiveLyrasEgg
 	promptbutton
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .GiveCyndaquilEgg
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .GiveTotodileEgg
-	giveegg CHIKORITA
+	giveegg PICHU_SPIKY_EARED_FORM
 	sjumpfwd .GotLyrasEgg
 
-.GiveCyndaquilEgg:
-	giveegg CYNDAQUIL
-	sjumpfwd .GotLyrasEgg
-
-.GiveTotodileEgg:
-	giveegg TOTODILE
 .GotLyrasEgg
 	iffalse_jumpopenedtext DayCareText_PartyAndBoxFull
 	writetext DayCareLadyText_DescribeLyrasEgg
