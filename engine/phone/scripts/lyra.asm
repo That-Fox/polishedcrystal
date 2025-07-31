@@ -242,23 +242,18 @@ LyraPhoneScript2:
 	end
 
 .LyrasEgg:
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .lyrasegg_totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .lyrasegg_chikorita
-	getstring .Chicory, STRING_BUFFER_4
+	checkevent EVENT_GOT_EEVEE_FROM_ELM
+	iftruefwd .lyrasegg_eevee
+	getstring .Johto, STRING_BUFFER_4
 	sjumpfwd .lyrasegg_end
-.lyrasegg_totodile
-	getstring .Cinder, STRING_BUFFER_4
+.lyrasegg_eevee
+	getstring .Eevee, STRING_BUFFER_4
 	sjumpfwd .lyrasegg_end
-.lyrasegg_chikorita:
-	getstring .Toto, STRING_BUFFER_4
 .lyrasegg_end
 	farwritetext LyraPhoneSpecialText_LyrasEgg
 	setevent EVENT_LYRA_GAVE_AWAY_EGG
 	specialphonecall SPECIALCALL_NONE
 	end
 
-.Chicory: db "Chicory@"
-.Cinder:  db "Cinder@"
-.Toto:    db "Toto@"
+.Johto: db "Cinder@"
+.Eevee:  db "Cinder@"
