@@ -286,7 +286,7 @@ EeveePokeBallScript:
 	yesorno
 	iffalse_jumpopenedtext DidntChooseStarterText
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_EEVEES_FROM_ELM
+	setevent EVENT_GOT_EEVEE_FROM_ELM
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
@@ -1012,9 +1012,9 @@ TakeKantoText:
 	para "from Kanto?"
 	done
 
-TakeEeveesText:
+TakeEeveeText:
 	text "Elm: So, you like"
-	line "these Eevee,"
+	line "these Eevees,"
 
 	para "the adaptable"
 	line "#mon?"
