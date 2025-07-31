@@ -1649,9 +1649,9 @@
 ; The map script command macros `setevent` and `clearevent` set/clear these flags, and their effects will be seen when the map is reloaded.
 
 ; Johto itemballs
-	const EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	const EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	const EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	const EVENT_JOHTO_POKEBALL_IN_ELMS_LAB
+	const EVENT_KANTO_POKEBALL_IN_ELMS_LAB
+	const EVENT_EEVEE_POKEBALL_IN_ELMS_LAB
 	const EVENT_VIOLET_CITY_PP_UP
 	const EVENT_VIOLET_CITY_RARE_CANDY
 	const EVENT_LAKE_OF_RAGE_ELIXIR
