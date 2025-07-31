@@ -143,19 +143,11 @@ DragonsDenB1FRivalScript:
 	waitbutton
 	writetext .GiveEggText
 	promptbutton
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftruefwd .GiveChikoritaEgg
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftruefwd .GiveCyndaquilEgg
+	giveegg CYNDAQUIL
 	giveegg TOTODILE
-	sjumpfwd .GotRivalsEgg
-
-.GiveChikoritaEgg:
 	giveegg CHIKORITA
 	sjumpfwd .GotRivalsEgg
 
-.GiveCyndaquilEgg:
-	giveegg CYNDAQUIL
 .GotRivalsEgg
 	iffalsefwd .PartyAndBoxFull
 	writetext .DescribeEggText
@@ -196,9 +188,9 @@ DragonsDenB1FRivalScript:
 	para "The #mon I…"
 	line "took from the Lab…"
 
-	para "It had an Egg."
-	line "I don't need it."
-	cont "Here. Take it."
+	para "I took some eggs"
+	line "too. I don't need"
+	cont "them. Take 'em."
 	done
 
 .DescribeEggText:
